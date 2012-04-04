@@ -3,15 +3,15 @@
     settings = $.extend(
       travelocity: 0.05
       showControls: false
-    , settings)
-    @each ->
+      , settings)
+    for t in @
       scrollnews = (spazio, tempo) ->
         $strip.animate
           left: "-=" + spazio
-        , tempo, "linear", ->
-          $strip.css "left", containerWidth
-          scrollnews totalTravel, defTiming
-      strip = this
+          , tempo, "linear", ->
+            $strip.css "left", containerWidth
+            scrollnews totalTravel, defTiming
+      strip = t
       $strip = $(strip)
       $strip.addClass "liScroll-ticker"
       $stripItems = $strip.find("li")
@@ -27,13 +27,13 @@
         if currentLeft > 0
           return 0
         else
-          $strip.find("li").each (i) ->
+          for strip_li in $strip.find("li")
             if currentLeft is (0 - accumulatedWidth)
-              index = i
+              index = strip_li
               return false
-            accumulatedWidth += $(this).width()
+            accumulatedWidth += $(strip_li).width()
             if currentLeft > (0 - accumulatedWidth)
-              index = i
+              index = strip_li
               return false
             true
         index
