@@ -1,3 +1,17 @@
+###
+ liScroll 1.2 updated by @joeytheman
+ liScroll 1.1 updated by @davetayls
+ 
+ Examples and documentation at:
+ http://the-taylors.org/blog/2010/03/15/liscroll-jquery-news-ticker-customisation-with-next-previous-play/
+ http://www.gcmingati.net/wordpress/wp-content/lab/jquery/newsticker/jq-liscroll/scrollanimate.html
+ 
+ 2007-2009 Gian Carlo Mingati
+ Dual licensed under the MIT and GPL licenses:
+ http://www.opensource.org/licenses/mit-license.php
+ http://www.gnu.org/licenses/gpl.html
+###
+
 (($) ->
   jQuery.fn.liScroll = (settings) ->
     settings = $.extend(
